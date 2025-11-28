@@ -75,7 +75,7 @@ def updateAllUsers(dict, jql=None):
 
 # input: server url as string
 # input: API-Key as string
-server = input("Please enter the URL of your Jira Instance (i.e. 'https://service.convales.de'): ")
+server = input("Please enter the URL of your Jira Instance (i.e. 'https://www.company.de'): ")
 url = f"{server}/rest/api/2/search"
 API_KEY = input("Please enter your API-Key: ")
 
@@ -96,7 +96,7 @@ with open(file_path, newline='') as csvfile:
 # JQL request
 wantJQL = (True if input("Do you want to enter a JQL request? (y/n): ") == 'y' else False)
 if wantJQL:
-   jql = input("Enter JQL (i.e. 'key = ITMIS-32448'): ")
+   jql = input("Enter JQL (i.e. 'key = KEY-12345'): ")
    updateAllUsers(newAccountOf, jql)
 else:
    updateAllUsers(newAccountOf)
